@@ -11,6 +11,13 @@
 更多 Flutter 开发相关的帮助，请访问
 [Flutter 官方文档](https://docs.flutter.dev/)，那里提供了详细的教程、
 示例代码、移动开发指南以及完整的 API 文档。
+硬件部分：
+主要使用Luckfox Pico MINI B 作为主控板
+wifi模块使用RTL8723BS
+SDK主要使用的是
+https://liefyuan.blog.csdn.net/article/details/133148418 这个博主的SDK的基础上继续进行的二次开发的SDK
+对于设备树修改可以参考：
+https://wiki.luckfox.com/zh/Luckfox-Pico/Luckfox-Pico-GPIO
 
 ### 主要功能
 -【图传识别】:APP首页可显示摄像头实时图像，并通过预训练yolov5视觉模型进行识别检测。
@@ -20,8 +27,17 @@
 -【天气预报】:集成了高德天气API，可查询各省市实时天气及未来三日天气。
 -【紧急呼叫】:集成了APP内紧急呼叫按钮。
 -【语音播报】:以上功能及相关状态通过TTS文字转语音播报告知用户。
+硬件部分：
+-【网络通讯】：通过RTL8723BS连接手机网络实现通讯
+-【图片拍摄】：通过OpenCV Mobile进行图片拍摄
+-【激光雷达处理】：通过串口进行激光雷达数据接收处理
+-【上电自启动】：通过配置inittab实现上电自启动以及程序运行维护
 
 ### 技术栈
 -Flutter 3.24.5
 -Dart 3.5.4
 -移动端第三方依赖包：（见pubspec.yaml）
+-C++
+-Python
+-OpenCV Mobile
+
